@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            TO DO List
+        </title>
+    </head>
+    <style>
+            .heading{
+            position: absolute;
+            left: 30%;
+            font-family: Ubuntu;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 168.99%;
+            text-align: center;
+            color: black;
+        }
+        table{
+            position:absolute;
+            top:100px;
+            text-align: center;
+        }
+        table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+th, td {
+  background-color: #96D4D4;
+}
+    </style>
+    <body>
+        <div class="heading">
+        <h1>DISPLAYING ALL USERS TO-DO LIST</h1>
+    </div>
+    <table>
+    <tr>
+        <th>S.NO</th>
+        <th>USERNAME</th>
+        <th style="width:35%">TITLE</th>
+        <th style="width:55%">DESCRIPTION </th>
+        <th>DEADLINE</th>
+    </tr>
+        <% for(var i=0; i < results.length; i++) { %>
+            <tr>
+                <td><%= i+1 %></td>
+                <td><%= results[i].username %></td>
+                <td><%= results[i].title %></td>
+                <td><%= results[i].description %></td>
+                <td><%= results[i].date %></td>
+            </tr>     
+        <% } %>
+    </table>
+    </body>
+</html>
